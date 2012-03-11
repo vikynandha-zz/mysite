@@ -1,0 +1,40 @@
+.shadow(@val) {
+  -webkit-box-shadow: @val;
+     -moz-box-shadow: @val;
+          box-shadow: @val;
+}
+
+.rcorners(@val:5px) {
+  -webkit-border-radius: @val;
+   -khtml-border-radius: @val;
+     -moz-border-radius: @val;
+          border-radius: @val;
+}
+
+.rotate(@deg: 0deg) {
+  -webkit-transform: rotate(@deg);
+     -moz-transform: rotate(@deg);
+      -ms-transform: rotate(@deg);
+       -o-transform: rotate(@deg);
+}
+
+.transition(@param) {
+  -webkit-transition: @param;
+     -moz-transition: @param;
+      -ms-transition: @param;
+       -o-transition: @param;
+          transition: @param;
+}
+
+.opacity(@val: 0.5) {
+  @msval: @val*100;
+
+  opacity: @val;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=@{msval})";
+  filter: ~"alpha(opacity = @{msval})";
+}
+
+/**********************************
+ Wrapper classes for some sprites
+***********************************/
+
