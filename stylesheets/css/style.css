@@ -48,7 +48,7 @@ input:invalid,textarea:invalid{background-color:#f0dddd;}
 table{border-collapse:collapse;border-spacing:0;}
 td{vertical-align:top;}
 .chromeframe{margin:0.2em 0;background:#ccc;color:black;padding:0.2em 0;}
-@font-face{font-family:"Movavi Grotesque";font-style:normal;font-weight:bold;src:url("/mysite/fonts/movavi-grotesque/movavi-grotesque.ttf");}body{background-color:white;color:#202020;font-family:"Kelly Slab",cursive;text-align:center;}
+@font-face{font-family:"Movavi Grotesque";font-style:normal;font-weight:bold;src:url("/fonts/movavi-grotesque/movavi-grotesque.ttf");}body{background-color:white;color:#202020;font-family:"Kelly Slab",cursive;text-align:center;}
 h2{line-height:1em;}
 a{text-decoration:none;-webkit-transition:all 0.25s linear 0s;-moz-transition:all 0.25s linear 0s;-ms-transition:all 0.25s linear 0s;-o-transition:all 0.25s linear 0s;transition:all 0.25s linear 0s;}
 ul.nobullets{list-style-type:none;}
