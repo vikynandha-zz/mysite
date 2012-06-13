@@ -84,6 +84,7 @@ td { vertical-align: top; }
 @orange: #FF624D;
 @gray: #202020;
 @blue: #4197A9;
+@shadowColor: rgba(0, 0, 0, 0.5);
 
 body {
   background-color: white;
@@ -131,7 +132,7 @@ nav {
     width: 100%;
     position: fixed;
     top: 0;
-    .shadow(0 0 10px 2px #333);
+    .shadow(0 0 10px 2px @shadowColor);
   }
 }
 
@@ -194,6 +195,7 @@ nav {
 
     &.img {
       background-color: transparent;
+      display: inline-block;
     }
   }
 }
@@ -209,8 +211,12 @@ nav {
 
 .thumbnail {
   border: 5px solid #EEE;
-  .shadow(0 0 5px #333);
+  .shadow(0 0 5px @shadowColor);
   margin: 10px 0;
+  .transition(all 0.2s);
+  &:hover {
+      .shadow(0 0 10px @shadowColor);
+  }
 }
 
 #interests ul {
