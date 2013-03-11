@@ -34,43 +34,67 @@
     <div class="content">
 
       <section id="designs">
+
         <header>
           <h2>Designs</h2>
           <p class="subhead">Wanna take a look at what I've designed? <br>Here you go..</p>
         </header>
+
         <div class="section-content">
+
+          <a href="http://loksatta.org/" class="thumbnail">
+            <img src="images/loksatta.jpg" alt="Lok Satta Party national website">
+            <span class="img-caption">Lok Satta Party national website</span>
+          </a>
+
+          <a href="http://tn.loksatta.org/" class="thumbnail">
+            <img src="images/loksatta-tn.jpg" alt="Lok Satta Party Tamil Nadu unit">
+            <span class="img-caption">Lok Satta Party Tamil Nadu unit</span>
+          </a>
+
           <a href="http://appprizes.com/" class="thumbnail">
             <img src="images/appprizes.jpg" alt="AppPrizes - Social games reward platform">
             <span class="img-caption">AppPrizes - Social games reward platform</span>
           </a>
+
           <a href="http://new.beevolve.com/plans/" class="thumbnail">
             <img src="images/beevolve.jpg" alt="Beevolve - Social media monitoring platform">
             <span class="img-caption">Beevolve - Social media monitoring platform</span>
           </a>
+
           <a href="http://apps.facebook.com/sudokuquest" class="thumbnail">
             <img src="images/sq-puzzle.jpg" alt="Sudoku quest - Facebook app">
             <span class="img-caption">Sudoku quest - Facebook app</span>
           </a>
+
           <a href="http://chipsandcodes.com" class="thumbnail">
             <img src="images/chipsandcodes.jpg" alt="Chips and Codes Technologies">
             <span class="img-caption">Chips and Codes Technologies</span>
           </a>
-          <!--a href="http://alumni.mitindia.edu" class="thumbnail">
-            <img src="images/mitaa.jpg" alt="MIT Alumni Association">
-            <span class="img-caption">MIT Alumni Association</span>
-          </a-->
-          <a href="http://web.archive.org/web/20110725211758/http://cb.csmit.org/cbxi/" class="thumbnail">
-            <img src="images/csmit-cb.jpg" alt="Carte Blanche - a Free Software fest">
-            <span class="img-caption">Carte Blanche - a Free Software fest</span>
-          </a>
-          <a href="http://csmit.org" class="thumbnail">
-            <img src="images/csmit.jpg" alt="Computer Society of MIT">
-            <span class="img-caption">Computer Society of MIT</span>
-          </a>
-          <a href="http://blog.csmit.org" class="thumbnail">
-            <img src="images/csmit-blog.jpg" alt="Computer Society of MIT blog">
-            <span class="img-caption">Computer Society of MIT blog</span>
-          </a>
+
+          <div class="more-thumbnails hide">
+
+            <a href="http://web.archive.org/web/20110725211758/http://cb.csmit.org/cbxi/" class="thumbnail">
+              <img src="images/csmit-cb.jpg" alt="Carte Blanche - a Free Software fest">
+              <span class="img-caption">Carte Blanche - a Free Software fest</span>
+            </a>
+
+            <a href="http://csmit.org" class="thumbnail">
+              <img src="images/csmit.jpg" alt="Computer Society of MIT">
+              <span class="img-caption">Computer Society of MIT</span>
+            </a>
+
+            <a href="http://blog.csmit.org" class="thumbnail">
+              <img src="images/csmit-blog.jpg" alt="Computer Society of MIT blog">
+              <span class="img-caption">Computer Society of MIT blog</span>
+            </a>
+
+          </div>
+
+          <div class="show-more-thumbnails">
+            <a href="#">Show more &raquo;</a>
+          </div>
+
         </div>
       </section>
 
@@ -161,6 +185,13 @@
 
         $('#menu').on('click' ,'a', function() {
           $.scrollTo(this.hash, 2000, {easing: 'easeOutQuint'});
+          return false;
+        });
+
+        $( '.show-more-thumbnails > a' ).on( 'click', function() {
+          $( this ).addClass( 'hide' )
+            .closest( '.section-content' ).find( '.more-thumbnails' )
+            .slideDown().removeClass( 'hide' );
           return false;
         });
       });

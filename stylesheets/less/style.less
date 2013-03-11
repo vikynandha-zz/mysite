@@ -216,13 +216,13 @@ nav {
   .img-caption {
       position: absolute;
       bottom: 0;
-      left: 0;
+      left: -1px;
       width: 100%;
-      padding: 5px 0;
+      padding: 5px 1px;
       text-align: center;
       font-size: 20px;
       color: #fff;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.75);
       opacity: 0;
       .transition(opacity 0.5s);
   }
@@ -233,6 +233,10 @@ nav {
           opacity: 1;
       }
   }
+}
+
+.show-more-thumbnails {
+    margin-top: 20px;
 }
 
 #interests ul {
@@ -259,6 +263,7 @@ footer {
 
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
 .ir br { display: none; }
+.hide { display: none; }
 .hidden { display: none !important; visibility: hidden; }
 .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
