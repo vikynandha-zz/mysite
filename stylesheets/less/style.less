@@ -147,14 +147,24 @@ header[role="banner"] {
       padding: 16px 14px;
     }
   }
-  .nav-item-text {
-    display: block;
-    font-size: 5px;
-  }
 }
 
-@media (max-width: 352px) {
-  .nav-item-text {
+.nav-item-text {
+  @media (max-width: 830px) {
+    display: block;
+    font-size: 11px;
+    margin-top: 0.5em;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 8px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 5px;
+  }
+
+  @media (max-width: 352px) {
     display: none;
   }
 }
