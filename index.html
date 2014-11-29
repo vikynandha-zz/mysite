@@ -169,7 +169,7 @@
     <script type="text/javascript" src="js/libs/jquery.scrollTo-min.js"></script>
     <script type="text/javascript">
       $(function() {
-        var menu = $('#menu'), pos = menu.offset();
+        var menu = $('#menu'), pos = menu.offset(), menu_height = menu.outerHeight();
         $(window).on('scroll', function() {
           if($(this).scrollTop() + 10 > pos.top) {
             if(!menu.hasClass('fixed')) {
@@ -184,7 +184,7 @@
         });
 
         $('#menu').on('click' ,'a', function() {
-          $.scrollTo(this.hash, 2000, {easing: 'easeOutQuint'});
+          $.scrollTo($(this.hash).offset().top - menu_height, 2000, {easing: 'easeOutQuint'});
           return false;
         });
 
