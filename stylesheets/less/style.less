@@ -240,6 +240,15 @@ header[role="banner"] {
 
 .section-content {
   margin-bottom: 26px;
+
+  .more-thumbnails {
+    display: none;
+  }
+  &.more-thumbnails-visible {
+    .more-thumbnails {
+      display: block;
+    }
+  }
 }
 
 .thumbnail {

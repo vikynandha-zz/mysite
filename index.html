@@ -91,7 +91,7 @@
             <span class="img-caption">Chips and Codes Technologies</span>
           </a>
 
-          <div class="more-thumbnails hide">
+          <div class="more-thumbnails">
 
             <a href="http://web.archive.org/web/20110725211758/http://cb.csmit.org/cbxi/" class="thumbnail">
               <img src="images/csmit-cb.jpg" alt="Carte Blanche - a Free Software fest">
@@ -182,39 +182,9 @@
       <p> Site design inspired from <a href="http://happycog.com">Happy Cog</a></p>
     </footer>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
-    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.js"><\/script>')</script>
-    <script type="text/javascript" src="js/libs/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="js/libs/jquery.scrollTo-min.js"></script>
-    <script type="text/javascript">
-      $(function() {
-        var menu = $('#menu'), pos = menu.offset(), menu_height = menu.outerHeight();
-        $(window).on('scroll', function() {
-          if($(this).scrollTop() + 10 > pos.top) {
-            if(!menu.hasClass('fixed')) {
-              menu.addClass('fixed');
-              $('.content').css('marginTop', menu.height());
-            }
-          }
-          else {
-            menu.removeClass('fixed');
-            $('.content').css('marginTop', 0);
-          }
-        });
-
-        $('#menu').on('click' ,'a', function() {
-          $.scrollTo($(this.hash).offset().top - menu_height, 2000, {easing: 'easeOutQuint'});
-          return false;
-        });
-
-        $( '.show-more-thumbnails > a' ).on( 'click', function() {
-          $( this ).addClass( 'hide' )
-            .closest( '.section-content' ).find( '.more-thumbnails' )
-            .slideDown().removeClass( 'hide' );
-          return false;
-        });
-      });
-    </script>
+    <!-- <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
+    <!-- <script type="text/javascript" src="js/libs/jquery.scrollTo-min.js"></script> -->
+    <script type="text/javascript" src="js/script.js"></script>
 
     <!-- Piwik -->
     <script type="text/javascript">
