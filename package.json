@@ -1,0 +1,11 @@
+{
+  "name": "viky-website",
+  "version": "0.1.0",
+  "description": "Static site of Vignesh Nandha Kumar",
+  "repository": "https://github.com/vikynandha/mysite/",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-less": "^2.0.1",
+    "gulp-watch": "^3.0.0"
+  }
+}
