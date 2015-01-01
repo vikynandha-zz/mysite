@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     less = require('gulp-less'),
     minifyCSS = require('gulp-minify-css'),
     inlineSource = require('gulp-inline-source'),
+    minifyHTML = require('gulp-minify-html'),
 
     src = {
         html: ['index.html'],
@@ -25,6 +26,7 @@ var gulp = require('gulp'),
 gulp.task('html', function () {
     gulp.src(src.html)
         .pipe(inlineSource())
+        .pipe(minifyHTML())
         .pipe(gulp.dest(dest.html));
 });
 
