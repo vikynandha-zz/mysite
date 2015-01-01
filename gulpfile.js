@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
+    path = require('path'),
     watch = require('gulp-watch'),
     less = require('gulp-less'),
-    path = require('path'),
 
     src = {
         html: ['index.html'],
