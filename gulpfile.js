@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     path = require('path'),
     watch = require('gulp-watch'),
     less = require('gulp-less'),
+    minifyCSS = require('gulp-minify-css'),
 
     src = {
         html: ['index.html'],
@@ -34,9 +35,8 @@ gulp.task('images', function () {
 
 gulp.task('css', function () {
     gulp.src(src.css)
-        .pipe(less({
-            compress: true
-        }))
+        .pipe(less())
+        .pipe(minifyCSS())
         .pipe(gulp.dest(dest.css));
 });
 
