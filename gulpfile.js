@@ -25,7 +25,9 @@ var gulp = require('gulp'),
 
 gulp.task('html', function () {
     gulp.src(src.html)
-        .pipe(inlineSource())
+        .pipe(inlineSource({
+            rootpath: 'build'
+        }))
         .pipe(minifyHTML())
         .pipe(gulp.dest(dest.html));
 });
@@ -58,13 +60,16 @@ gulp.task('js', function () {
 
 
 gulp.task('watch', function() {
-    gulp.watch(src.html, ['html']);
     gulp.watch(src.images, ['images']);
     gulp.watch(src.css, ['css']);
     gulp.watch(src.fonts, ['fonts']);
     gulp.watch(src.js, ['js']);
+    gulp.watch(src.html, ['html']);
 });
 
 
-gulp.task('default', ['html', 'images', 'css', 'fonts', 'js', 'watch'], function () {
+// Order is important:
+// CSS might refer to images & fonts, so minify them before CSS
+// Keep HTML at last, as it could have reference to any other resource
+gulp.task('default', ['images', 'fonts', 'css', 'js', 'html', 'watch'], function () {
 });
