@@ -49,4 +49,10 @@
         this.className += ' hide';
         closest(this, '.section-content').className += ' more-thumbnails-visible';
     });
+
+    document.getElementById('email').setAttribute(
+        'href',
+        'mailto' + ':' + 'viky' + '.' + 'nandha' + '@' + 'gmail' + '.' + 'com'
+    );
+
 })();
