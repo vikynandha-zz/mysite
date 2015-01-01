@@ -5,6 +5,7 @@
   "repository": "https://github.com/vikynandha/mysite/",
   "devDependencies": {
     "gulp": "^3.8.10",
+    "gulp-inline-source": "^1.1.0",
     "gulp-less": "^2.0.1",
     "gulp-minify-css": "^0.3.11",
     "gulp-watch": "^3.0.0"

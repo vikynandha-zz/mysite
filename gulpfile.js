@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     less = require('gulp-less'),
     minifyCSS = require('gulp-minify-css'),
+    inlineSource = require('gulp-inline-source'),
 
     src = {
         html: ['index.html'],
@@ -23,6 +24,7 @@ var gulp = require('gulp'),
 
 gulp.task('html', function () {
     gulp.src(src.html)
+        .pipe(inlineSource())
         .pipe(gulp.dest(dest.html));
 });
 
