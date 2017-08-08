@@ -43,13 +43,6 @@
         }
     });
 
-    $1( '.show-more-thumbnails > a' ).addEventListener( 'click', function(e) {
-        if (e && e.preventDefault) e.preventDefault();
-        else e.returnValue = false;
-        this.className += ' hide';
-        closest(this, '.section-content').className += ' more-thumbnails-visible';
-    });
-
     document.getElementById('email').setAttribute(
         'href',
         'mailto' + ':' + 'viky' + '.' + 'nandha' + '@' + 'gmail' + '.' + 'com'
